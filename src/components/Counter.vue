@@ -1,8 +1,9 @@
 <template>
   <div class="test">
   <h1>{{ msg }}</h1>
-  <button v-on:click='increment'> Click me! </button>
+  <button @click='increment'> Click me! </button>
   <p>This button has been clicked {{ counter }} times. </p>
+  <p> Counter squared would be {{ counterSquared }} times. </p>
   </div>
 </template>
 
@@ -11,11 +12,21 @@ export default {
   name: 'Counter',
   data: () => ({
     msg: 'Click counter',
-    counter: 0,
+    // counter: 0,
   }),
   methods: {
-    increment: function() {
-      return this.counter += 1;
+    increment() {
+     store.commit('increment')
+      // this.counter += 1;
+      // return null;
+    },
+  },
+  computed: {
+    counter() {
+      return this.$store.state.counter;
+    },
+    counterSquared() {
+      return this.counter * this.counter;
     },
   },
 };

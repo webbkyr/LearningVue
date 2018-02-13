@@ -4,8 +4,7 @@
     <h2>Essential Links</h2>
       <ul id="vue-core-links">
         <li v-for="(link, index) in corelinks" v-bind:index='index'
-          v-bind:title='link.title'
-          v-bind:key=index>
+          v-bind:title='link.title' v-bind:key=index>
         <a :href='link.url' target="_blank"> {{ link.title }} </a>
         </li>
       </ul>

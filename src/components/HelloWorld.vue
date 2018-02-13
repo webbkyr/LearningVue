@@ -3,11 +3,10 @@
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul id="vue-links">
-      <li is='link'
-        v-for="(link, index) in links" v-bind:link='link' v-bind:index='index'
+      <li v-for="(link, index) in links" v-bind:link='link' v-bind:index='index'
         v-bind:title='link.title'
         v-bind:key=index>
-       <a v-bind:href=links.link target="_blank"> {{ links.title }} </a>
+       <a :href='link.url' target="_blank"> {{ link.title }} </a>
       </li>
     </ul>
   </div>
@@ -19,9 +18,9 @@ export default {
   data: () => ({
     msg: 'Kayla`s app',
     links: [
-      { link: 'https://vuejs.org', title: 'Core Docs' },
-      { link: 'https://forum.vuejs.org', title: 'Forum' },
-      { link: 'https://chat.vuejs.org', title: 'Community Docs' },
+      { url: 'https://vuejs.org', title: 'Core Docs' },
+      { url: 'https://forum.vuejs.org', title: 'Forum' },
+      { url: 'https://chat.vuejs.org', title: 'Community Docs' },
     ],
   }),
 };

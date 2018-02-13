@@ -16,17 +16,18 @@ export default {
   }),
   methods: {
     increment() {
-     store.commit('increment')
+      this.$store.commit('increment');
       // this.counter += 1;
       // return null;
     },
   },
   computed: {
     counter() {
-      return this.$store.state.counter;
+      return this.$store.state.count;
     },
     counterSquared() {
-      return this.counter * this.counter;
+      const num = this.$store.state.count;
+      return num * num;
     },
   },
 };

@@ -1,6 +1,6 @@
-# Puppy Gallery
+# Learning Vue.js
 
-> A collection of adorable photos of puppies.
+> Learning about the Vue framework
 
 ## Build Setup
 

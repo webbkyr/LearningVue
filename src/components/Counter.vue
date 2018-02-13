@@ -1,8 +1,9 @@
 <template>
   <div class="test">
   <h1>{{ msg }}</h1>
-  <button @click='increment'> Click me! </button>
-  <p>This button has been clicked {{ counter }} times. </p>
+  <button @click='increment'> + </button>
+  <button @click='decrement'> - </button>
+  <p>The button count is {{ counter }}. </p>
   <p> Counter squared would be {{ counterSquared }} times. </p>
   </div>
 </template>
@@ -12,13 +13,13 @@ export default {
   name: 'Counter',
   data: () => ({
     msg: 'Click counter',
-    // counter: 0,
   }),
   methods: {
     increment() {
       this.$store.commit('increment');
-      // this.counter += 1;
-      // return null;
+    },
+    decrement() {
+      this.$store.commit('decrement');
     },
   },
   computed: {

@@ -1,6 +1,6 @@
-# y
+# Puppy Gallery
 
-> y
+> A collection of adorable photos of puppies.
 
 ## Build Setup
 
